@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../widgets/background_image.dart';
+import 'esqueceusenha_tela.dart';
 
 class LoginTela extends StatefulWidget {
   const LoginTela({super.key});
@@ -38,39 +39,42 @@ class _LoginTelaState extends State<LoginTela> {
       children: [
         const BackgroundImage(),
         Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.transparent,
+          ),
           backgroundColor: Colors.transparent,
           body: SafeArea(
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 18.0),
-                    child: SizedBox(
-                      height: 50,
-                      child: ListTile(
-                        title: Center(
-                          child: Text(
-                            'Duna Beach Sports',
-                            style: GoogleFonts.bebasNeue(
-                              color: const Color.fromARGB(255, 185, 156, 67),
-                              fontSize: 52,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                        subtitle: const Center(
-                          child: Text(
-                            'A melhor parte do seu dia!',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.amber,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 50),
+                  // Padding(
+                  //   padding: const EdgeInsets.symmetric(vertical: 18.0),
+                  //   child: SizedBox(
+                  //     height: 50,
+                  //     child: ListTile(
+                  //       title: Center(
+                  //         child: Text(
+                  //           'Duna Beach Sports',
+                  //           style: GoogleFonts.bebasNeue(
+                  //             color: const Color.fromARGB(255, 185, 156, 67),
+                  //             fontSize: 52,
+                  //             fontWeight: FontWeight.bold,
+                  //           ),
+                  //         ),
+                  //       ),
+                  //       subtitle: const Center(
+                  //         child: Text(
+                  //           'A melhor parte do seu dia!',
+                  //           style: TextStyle(
+                  //             fontSize: 20,
+                  //             color: Colors.amber,
+                  //           ),
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
+                  const SizedBox(height: 150),
                   Text(
                     'Olá novamente!',
                     style: GoogleFonts.bebasNeue(
@@ -85,7 +89,7 @@ class _LoginTelaState extends State<LoginTela> {
                     textAlign: TextAlign.center,
                     'Sentimos a sua falta!',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 20,
                       color: Colors.white,
                     ),
                   ),
@@ -104,11 +108,20 @@ class _LoginTelaState extends State<LoginTela> {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20.0),
                         child: TextField(
+                          style: const TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
                           controller: _emailControlador,
                           decoration: const InputDecoration(
+                            icon: Icon(
+                              Icons.email_outlined,
+                              color: Color.fromARGB(255, 185, 156, 67),
+                            ),
                             border: InputBorder.none,
                             hintText: 'Email',
                             hintStyle: TextStyle(
+                              fontSize: 18,
                               color: Colors.white,
                             ),
                           ),
@@ -130,12 +143,21 @@ class _LoginTelaState extends State<LoginTela> {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20.0),
                         child: TextField(
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
                           obscureText: true,
                           controller: _senhaControlador,
                           decoration: const InputDecoration(
+                            icon: Icon(
+                              Icons.lock,
+                              color: Color.fromARGB(255, 185, 156, 67),
+                            ),
                             border: InputBorder.none,
                             hintText: 'Senha',
                             hintStyle: TextStyle(
+                              fontSize: 18,
                               color: Colors.white,
                             ),
                           ),
@@ -144,9 +166,36 @@ class _LoginTelaState extends State<LoginTela> {
                     ),
                   ),
 
+                  const SizedBox(height: 10),
+
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return const EsqueceuSenhaTela();
+                            }));
+                          },
+                          child: const Text(
+                            'Esqueceu a senha?',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
                   Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 25.0, vertical: 25.0),
+                        horizontal: 25.0, vertical: 15.0),
                     child: GestureDetector(
                       onTap: entrarUsuario,
                       child: Container(

@@ -56,58 +56,36 @@ class _RegistrarTelaState extends State<RegistrarTela> {
       children: [
         const BackgroundImage(),
         Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.transparent,
+          ),
           backgroundColor: Colors.transparent,
           body: SafeArea(
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 18.0),
-                    child: SizedBox(
-                      height: 50,
-                      child: ListTile(
-                        title: Center(
-                          child: Text(
-                            'Duna Beach Sports',
-                            style: GoogleFonts.bebasNeue(
-                              color: const Color.fromARGB(255, 185, 156, 67),
-                              fontSize: 52,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                        subtitle: const Center(
-                          child: Text(
-                            'A melhor parte do seu dia!',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.amber,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
                   const SizedBox(height: 50),
                   Text(
                     'Seja bem vindo!',
                     style: GoogleFonts.bebasNeue(
                       fontSize: 52,
-                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      color: const Color.fromARGB(255, 185, 156, 67),
                     ),
                   ),
-                  const SizedBox(height: 5),
+                  const SizedBox(height: 15),
 
                   //Campo Texto Registrar
                   const Text(
                     textAlign: TextAlign.center,
                     'Registre-se abaixo preenchendo com seus detalhes!',
                     style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 185, 156, 67),
                     ),
                   ),
-                  const SizedBox(height: 15),
+                  const SizedBox(height: 5),
 
                   //Campo Nome
                   Padding(
@@ -122,11 +100,16 @@ class _RegistrarTelaState extends State<RegistrarTela> {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20.0),
                         child: TextField(
+                          style: const TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
                           controller: _nomeControlador,
                           decoration: const InputDecoration(
                             border: InputBorder.none,
                             hintText: 'Nome',
                             hintStyle: TextStyle(
+                              fontSize: 18,
                               color: Colors.white,
                             ),
                           ),
@@ -148,11 +131,16 @@ class _RegistrarTelaState extends State<RegistrarTela> {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20.0),
                         child: TextField(
+                          style: const TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
                           controller: _sobrenomeControlador,
                           decoration: const InputDecoration(
                             border: InputBorder.none,
                             hintText: 'Sobrenome',
                             hintStyle: TextStyle(
+                              fontSize: 18,
                               color: Colors.white,
                             ),
                           ),
@@ -174,11 +162,16 @@ class _RegistrarTelaState extends State<RegistrarTela> {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20.0),
                         child: TextField(
+                          style: const TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
                           controller: _emailControlador,
                           decoration: const InputDecoration(
                             border: InputBorder.none,
                             hintText: 'Email',
                             hintStyle: TextStyle(
+                              fontSize: 18,
                               color: Colors.white,
                             ),
                           ),
@@ -200,12 +193,17 @@ class _RegistrarTelaState extends State<RegistrarTela> {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20.0),
                         child: TextField(
+                          style: const TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
                           controller: _senhaControlador,
                           obscureText: true,
                           decoration: const InputDecoration(
                             border: InputBorder.none,
                             hintText: 'Senha',
                             hintStyle: TextStyle(
+                              fontSize: 18,
                               color: Colors.white,
                             ),
                           ),
@@ -227,12 +225,17 @@ class _RegistrarTelaState extends State<RegistrarTela> {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20.0),
                         child: TextField(
+                          style: const TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
                           controller: _senhaConfirmadaControlador,
                           obscureText: true,
                           decoration: const InputDecoration(
                             border: InputBorder.none,
                             hintText: 'Confirmar Senha',
                             hintStyle: TextStyle(
+                              fontSize: 18,
                               color: Colors.white,
                             ),
                           ),

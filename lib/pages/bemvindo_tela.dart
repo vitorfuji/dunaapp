@@ -53,48 +53,31 @@ class BemVindoTela extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
                         Text(
-                          'Ja possui uma conta no ',
-                          style: TextStyle(color: Colors.white),
+                          'Já possui uma conta no ',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
                         ),
                         Text(
                           'Duna',
-                          style: TextStyle(color: Colors.amber),
+                          style: TextStyle(
+                            color: Colors.amber,
+                            fontSize: 18,
+                          ),
                         ),
                         Text(
-                          ' ?',
-                          style: TextStyle(color: Colors.white),
+                          '?',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
                         ),
                       ],
                     ),
                   ),
                   Column(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                        child: Container(
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 185, 156, 67),
-                            borderRadius: BorderRadius.circular(16),
-                          ),
-                          child: MaterialButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const RegistrarTela()),
-                              );
-                            },
-                            child: const Text(
-                              'Criar uma conta',
-                              style: TextStyle(
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
                       Padding(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 25.0, vertical: 12.0),
@@ -116,11 +99,39 @@ class BemVindoTela extends StatelessWidget {
                               'Acessar minha conta',
                               style: TextStyle(
                                 color: Colors.black,
+                                fontSize: 18,
                               ),
                             ),
                           ),
                         ),
-                      )
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                        child: Container(
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            color: const Color.fromARGB(255, 185, 156, 67),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: MaterialButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const RegistrarTela()),
+                              );
+                            },
+                            child: const Text(
+                              'Criar uma conta',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   )
                 ],
