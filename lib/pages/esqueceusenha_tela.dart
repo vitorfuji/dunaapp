@@ -124,7 +124,7 @@ class _EsqueceuSenhaTelaState extends State<EsqueceuSenhaTela> {
                 child: const Text(
                   'Redefinir Senha',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 18,
                   ),
                 ),
               ),
