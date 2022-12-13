@@ -1,5 +1,5 @@
-import 'package:dunaapp/pages/bemvindo_tela.dart';
-import 'package:dunaapp/pages/home_tela.dart';
+import 'package:dunaapp/bemvindo/bemvindo_tela.dart';
+import 'package:dunaapp/home_screen/home_tela.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 

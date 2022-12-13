@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../widgets/background_image.dart';
-import 'login_tela.dart';
-import 'registrar_tela.dart';
+import '../login/login_tela.dart';
+import '../registrar/registrar_tela.dart';
 
 class BemVindoTela extends StatelessWidget {
   const BemVindoTela({super.key});

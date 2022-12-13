@@ -15,42 +15,6 @@ class _HomeTelaState extends State<HomeTela> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Colors.black87,
-      // ),
-      // drawer: Drawer(
-      //   child: Container(
-      //     color: const Color.fromARGB(255, 185, 153, 55),
-      //     child: ListView(
-      //       children: [
-      //         DrawerHeader(
-      //           child: Image.asset(
-      //             'lib/images/duna7.png',
-      //             fit: BoxFit.fitWidth,
-      //           ),
-      //         ),
-      //         ListTile(
-      //           leading: const Icon(
-      //             Icons.home,
-      //             color: Colors.white,
-      //             size: 35,
-      //           ),
-      //           title: const Text(
-      //             'Início',
-      //             style: TextStyle(
-      //               fontSize: 20,
-      //               color: Colors.white,
-      //             ),
-      //           ),
-      //           onTap: () {
-      //             Navigator.of(context).push(MaterialPageRoute(
-      //                 builder: (context) => const HomeTela()));
-      //           },
-      //         )
-      //       ],
-      //     ),
-      //   ),
-      // ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
